@@ -51,3 +51,5 @@ RUN go get code.google.com/p/biogo.store/llrb && \
 RUN cd $ROCKSDBPATH && git clone https://github.com/cockroachdb/rocksdb.git && \
  cd $COREOSPATH && git clone https://github.com/cockroachdb/etcd.git && \
  cd $ROCKSDBPATH/rocksdb && make static_lib
+
+RUN ln -s "${ROACHPATH}/cockroach" /cockroach 
